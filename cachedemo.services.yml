@@ -1,0 +1,6 @@
+services:
+  cache_context.user_summary:
+    class: Drupal\cachedemo\CacheContext\UserSummaryCacheContext
+    arguments: ['@current_user']
+    tags:
+      - { name: cache.context }

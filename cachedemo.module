@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains cachedemo.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cachedemo_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cachedemo module.
+    case 'help.page.cachedemo':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Cache Demo Tags Contexts etc') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function cachedemo_theme() {
+  return [
+    'cachedemo' => [
+      'render element' => 'children',
+    ],
+  ];
+}

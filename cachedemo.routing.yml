@@ -1,0 +1,8 @@
+
+cachedemo.cachedemo_controller_cachedemo:
+  path: 'cachedemo'
+  defaults:
+    _controller: '\Drupal\cachedemo\Controller\CachedemoController::cachedemo'
+    _title: 'Cache Demo'
+  requirements:
+    _permission: 'access content'
